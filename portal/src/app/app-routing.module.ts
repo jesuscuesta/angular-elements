@@ -9,6 +9,7 @@ const routes: Routes = [
         (m) => m.SectionSpaOneModule
       ),
   },
+  { path: 'section-spa-two', loadChildren: () => import('./pages/section-spa-two/section-spa-two.module').then(m => m.SectionSpaTwoModule) },
 ];
 
 @NgModule({
