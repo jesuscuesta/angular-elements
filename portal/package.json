@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
+    "deploy-angular-element": "git+https://github.com/jesuscuesta/deploy-angular-element.git",
     "document-register-element": "^1.7.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

@@ -10,6 +10,7 @@ const routes: Routes = [
       ),
   },
   { path: 'section-spa-two', loadChildren: () => import('./pages/section-spa-two/section-spa-two.module').then(m => m.SectionSpaTwoModule) },
+  { path: 'section-spa-one-github', loadChildren: () => import('./pages/section-spa-one-github/section-spa-one-github.module').then(m => m.SectionSpaOneGithubModule) },
 ];
 
 @NgModule({
