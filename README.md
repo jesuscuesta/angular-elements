@@ -41,7 +41,7 @@ ng new portal ---routing --prefix=portal
 
 ![versiones](./imgs/generando-proyecto.png)
 
-Nos tememos dentro del proyecto
+Nos metemos dentro del proyecto
 
 ```js
 cd portal
@@ -78,3 +78,18 @@ Esto nos añadirá algunas modificaciones en el proyecto, además de la dependen
 ```js
 "@angular/elements": "^9.1.9",
 ```
+
+## Portal
+
+Toda la documentación del portal y pasos realizados para su generación, están en [su propio readme](https://github.com/jesuscuesta/angular-elements/tree/master/portal).
+
+## Generamos SPA-ONE
+
+La documentación de dicha aplicación, y como generarla, está en su [propio readme](https://github.com/jesuscuesta/angular-elements/tree/feat/spa-one/spa-one).
+
+## Documentación
+
+- https://angular.io/guide/elements: Documentación oficial de Angular para los Angular Elements. Bastante mala la documentación, no os resolverá ninguna duda.
+
+- https://www.angulararchitects.io/aktuelles/your-options-for-building-angular-elements/
+  

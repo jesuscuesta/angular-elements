@@ -1,27 +1,89 @@
 # Portal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+Esta web contendrá todos los webcomponents que se vayan generando con angular elements.
 
-## Development server
+## Importando ejemplo MicroFrontends
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Existen muchas formas de utilización de angular elements en un proyecto. En este caso, para hacerlo más sencillo, vamos a copiar las carpetas ```dist``` de cada proyecto spa-numero en la carpeta assets de nuestro proyecto portal, y los imporemos de ahí. Algunas de las otras posibilidades serían mediante dependencias de package.json, CDN, por configuración, etc...
 
-## Code scaffolding
+Vamos a crear un menú con lazy loading para ir añadiendo las diferentes SPA de webcomponents que vayamos generando.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Desde la aplicación portal, lanzamos el siguiente comando:
 
-## Build
+```js
+ng g module pages/section-spa-one --route section-spa-one --module app.module
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Luego en de app.component.html, añadimos el menú.
 
-## Running unit tests
+### Uso de SPA-ONE Básico
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+La forma básica de añadir un webcomponent en nuestra aplicación, será importándolo en el componente de nuestra aplicación donde queramos mostrarlo y añadir la etiqueta html.
 
-## Running end-to-end tests
+```js
+// section-spa-one.module.ts
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+import { SectionSpaOneRoutingModule } from './section-spa-one-routing.module';
+import { SectionSpaOneComponent } from './section-spa-one.component';
 
-## Further help
+import '../../../assets/spa-one/main-es2015';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+@NgModule({
+  declarations: [SectionSpaOneComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [CommonModule, SectionSpaOneRoutingModule],
+})
+export class SectionSpaOneModule {}
+
+```
+
+```js
+// section-spa-one.component.html
+<p>section-spa-one works!</p>
+<spa-one-elements></spa-one-elements>
+```
+
+Ventajas:
+
+- Fácil de aplicar
+- Rápido
+
+Desventajas
+
+- No podemos controlar si hay algún error en el webcomponent
+- No podemos gestionar su carga
+- No podemos generarlo dinámicamente
+
+### Uso de SPA-ONE Extensión
+
+- WIP
+
+### Pasar valores con input y output
+
+- WIP
+  
+### Importar web component con dependencia
+
+- WIP
+  
+### Importar webcomponent por CDN
+
+- WIP
+  
+### Selección dinámica de webcomponents por configuración
+
+- WIP
+  
+### Aplicación webcomponent con Lazy Loading con error
+
+- WIP
+  
+### Aplicación webcomponent con Lazy loading solucionándolo
+
+- WIP
+  
+### Importar angular elements desde aplicación react
+
+- WIP
