@@ -41,7 +41,7 @@ ng new portal ---routing --prefix=portal
 
 ![versiones](./imgs/generando-proyecto.png)
 
-Nos tememos dentro del proyecto
+Nos metemos dentro del proyecto
 
 ```js
 cd portal
@@ -78,3 +78,39 @@ Esto nos añadirá algunas modificaciones en el proyecto, además de la dependen
 ```js
 "@angular/elements": "^9.1.9",
 ```
+
+## Importando ejemplo MicroFrontends
+
+Existen muchas formas de utilización de angular elements en un proyecto. En este caso, para hacerlo más sencillo, vamos a copiar las carpetas ```dist``` de cada proyecto spa-numero en la carpeta assets de nuestro proyecto portal, y los imporemos de ahí. Algunas de las otras posibilidades serían mediante dependencias de package.json, CDN, por configuración, etc...
+
+Vamos a crear un menú con lazy loading para ir añadiendo las diferentes SPA de webcomponents que vayamos generando.
+
+```js
+ng g module pages/section-spa-one --route section-spa-one --module app.module
+```
+
+### Uso de SPA-ONE Básico
+
+La forma básica de añadir un webcomponent en nuestra aplicación, será importándolo en el componente de nuestra aplicación donde queramos mostrarlo y añadir la etiqueta html.
+
+Ventajas:
+
+- Fácil de aplicar
+- Rápido
+
+Desventajas
+
+- No podemos controlar si hay algún error en el webcomponent
+- No podemos gestionar su carga
+- No podemos generarlo dinámicamente
+
+## Generamos SPA-ONE
+
+La documentación de dicha aplicación, y como generarla, está en su propio readme.
+
+## Documentación
+
+- https://angular.io/guide/elements: Documentación oficial de Angular para los Angular Elements. Bastante mala la documentación, no os resolverá ninguna duda.
+
+- https://www.angulararchitects.io/aktuelles/your-options-for-building-angular-elements/
+  
