@@ -126,7 +126,15 @@ Actualizamos el html, donde lo mostraremos.
 
 ```
 
-- WIP
+Ventajas
+
+- Utilizando las propiedades avanzadas de la librería, podemos gestionar cuando esta cargando o terminando de cargar el webcomponent
+- Si hay un error en el webcomponente que colapsase el navegador, con este sistema podemos cambiar de sección o cerrarlo sin tener que recurrir al administrador de tareas
+- Admitir importaciones dinámicas y más avanzadas
+
+Desventajas
+
+- Debemos importar una nueva librería
 
 ### Pasar valores con input y output
 
