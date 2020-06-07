@@ -18,15 +18,15 @@ Luego en de app.component.html, añadimos el menú.
 
 ### Uso de SPA-ONE Básico
 
-[Explicación Spa One Básica](https://github.com/jesuscuesta/angular-elements/tree/master/portal/readme/spa-one.md)
+[Explicación Spa One Básica](https://github.com/jesuscuesta/angular-elements/blob/doc/portal/portal/readme/spa-one.md)
 
 ### Uso de SPA-ONE Extensión
 
-[Explicación Spa One Básica utilizando extensión elements](https://github.com/jesuscuesta/angular-elements/tree/master/portal/readme/spa-one-ext.md)
+[Explicación Spa One Básica utilizando extensión elements](https://github.com/jesuscuesta/angular-elements/blob/doc/portal/portal/readme/spa-one-ext.md)
 
 ### Importar web component con dependencia
 
-[Explicación importando como dependencia un angular element](https://github.com/jesuscuesta/angular-elements/tree/master/portal/readme/spa-github.md)
+[Explicación importando como dependencia un angular element](https://github.com/jesuscuesta/angular-elements/blob/doc/portal/portal/readme/spa-github.md)
 
 ### Pasar valores con input y output
 
@@ -34,7 +34,7 @@ Luego en de app.component.html, añadimos el menú.
 
 ### Webcomponent con secciones sin lazy loading
 
-[Explicación SPA con routing básico convertida en Angular elements](https://github.com/jesuscuesta/angular-elements/tree/master/portal/readme/spa-with-routing.md)
+[Explicación SPA con routing básico convertida en Angular elements](https://github.com/jesuscuesta/angular-elements/blob/doc/portal/portal/readme/spa-with-routing.md)
 
 ### Importar webcomponent por CDN
 
