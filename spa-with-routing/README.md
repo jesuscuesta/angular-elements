@@ -1,6 +1,6 @@
-# SpaOne
+# Spa With Routing
 
-Aplicación convertida en angular Elements
+Aplicación convertida en angular Elements con secciones
 
 ## Pasos
 
@@ -30,7 +30,7 @@ Actualizamos app.module.ts, para registrar nuestro componente como un custom ele
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
-
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -54,22 +54,6 @@ export class AppModule {
 }
 ```
 
-Actualizamos el app.component.ts, para convertir nuestro custom element en un webcomponent, al aplicarle el shadow dom.
-
-```js
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'spa-one-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsultion.Native
-})
-export class AppComponent {
-  title = 'spa-one';
-}
-```
-
 Actualizamos el package.json, para generar el build. Con este comando conseguiremos tener solo un build, además de quitar los hash de los bundldes.
 
 ```js
@@ -89,7 +73,7 @@ Una vez generado, nos vamos con la terminal a la carpeta ./dist/spa-one y actual
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
-    <spa-one-elements></spa-one-elements>
+    <spa-with-routing-elements></spa-with-routing-elements>
     <script src="polyfills-es5.js" nomodule defer></script>
     <script src="polyfills-es2015.js" type="module"></script>
     <script src="main-es2015.js" type="module"></script>
@@ -110,16 +94,60 @@ En el caso de que quisiésemos un webcomponent, deberíamos añadir una propieda
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'spa-one-root',
+  selector: 'spa-with-routing-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class AppComponent {
-  title = 'spa-one';
+  title = 'spa with routing';
 }
-
 ```
 
 Como podemos ver en la captura de pantalla, si vamos al depurador, veremos que ahora tenemos #shadow-root.
 ![Webcomponent](./readme/webcomponent.png)
+
+### Crear routing
+
+Generaremos dos componentes.
+
+```js
+ng g component pages/home
+```
+
+```js
+ng g component pages/contact
+```
+
+Creamos un menú en el app.component.html
+
+```html
+Esto es una SPA básica con routing sin lazy loading
+<ul>
+  <li><a routerLink="home">home</a></li>
+  <li><a routerLink=contact">contact</a></li>
+</ul>
+
+<router-outlet></router-outlet>
+
+```
+
+Actualizamos el routing
+```js
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { ContactComponent } from './pages/contact/contact.component';
+
+const routes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'contact', component: ContactComponent },
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}
+
+```

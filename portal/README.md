@@ -191,6 +191,10 @@ export class SectionSpaOneGithubModule { }
 
 - WIP
 
+### Webcomponent con secciones sin lazy loading
+
+- WIP
+
 ### Importar webcomponent por CDN
 
 - WIP

@@ -85,6 +85,22 @@ Toda la documentación del portal y pasos realizados para su generación, están
 
 ## Generamos SPA-ONE
 
+Generamos la aplicación spa-one
+
+```js
+ng new spa-one --routing --prefix=spa-one
+```
+
+La documentación de dicha aplicación, y como generarla, está en su [propio readme](https://github.com/jesuscuesta/angular-elements/tree/feat/spa-one/spa-one).
+
+## Generamos SPA-TWO
+
+Generamos la aplicación spa-with-routing
+
+```js
+ng new spa-with-routing --routing --prefix=spa-with-routing
+```
+
 La documentación de dicha aplicación, y como generarla, está en su [propio readme](https://github.com/jesuscuesta/angular-elements/tree/feat/spa-one/spa-one).
 
 ## Documentación
