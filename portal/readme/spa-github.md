@@ -69,9 +69,40 @@ Cuando estamos clonando un proyecto, nos permite realizar dicha acción mediante
 
 Hay que tener en cuenta en este sistema, que aquellos usuarios que intenten descargarse la dependencia con este sistema, sin tenerlo configurado, les dará error. Por lo que es aconsejable, incluir esta información y procedimiento en el readme del proyecto principal.
 
+```js
+npm install --save https://github.com/jesuscuesta/deploy-angular-element.git
+```
+
 ## Repositorio Binarios
 
 Esta sería la mejor solución. En el caso de que nuestro sistema tenga instalado y configurado un [Nexus](https://www.sonatype.com/product-nexus-repository), [Artifactory](https://jfrog.com/artifactor) o similares (importante la versión de estos software, las antiguas no disponían de esta integración), podremos configurar un NPM Privado que nos permitirá subir dicha dependencia para posteriormente gestionarla como el resto de librerías de terceros.
+
+Antes de descargar la dependencia, deberemos configurar nuestro `.npmrc` global de nuestro usuario o dentro de nuestro proyecto, añadiendo la ruta de nuestro nexus.
+
+```js
+// Ejemplo como setear la ruta desde la terminal
+
+npm config set registry http://localhost:8081/repository/npm-all/
+```
+
+O podemos crear el fichero desde nuestro IDE y añadirlo manualmente.
+
+```js
+registry = http://localhost:8081/repository/npm-all/
+```
+
+En algunos casos, para poder acceder a este Nexus para descargarnos las dependencias, deberemos anteriormente logarnos. Dado que hay que hacer diferentes pasos, os dejo la [guía oficial](https://help.sonatype.com/repomanager3/formats/npm-registry) para realizarlo con Nexus.
+
+Al final, posiblemente os quede en el .npmrc algo parecido a:
+
+```js
+registry = http://localhost:8081/repository/npm-all/
+email=you@example.com
+always-auth=true
+_auth=YWRtaW46YWRtaW4xMjM= 
+```
+
+Para instalar la libería, despues de la configuración, nos bastará con un npm install de defecto con el nombre de la librería.
 
 ```js
 npm install --save NOMBRE_LIBRERÍA
