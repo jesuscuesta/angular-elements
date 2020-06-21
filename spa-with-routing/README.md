@@ -151,3 +151,12 @@ const routes: Routes = [
 export class AppRoutingModule {}
 
 ```
+
+Una vez probada la aplicación, y viendo que todo funciona correctamente. Pasaríamos a generar el build en formato angular elements.
+
+Una vez generado este build, para su consumo podemos:
+
+- Importarlo directamente en un proyecto
+- Subir el desplegado a un repositorio para su importación como dependencia
+- Desplegarlo en un repositorio de binarios, para su importación como dependencia
+  
