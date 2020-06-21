@@ -34,9 +34,35 @@ const routes: Routes = [
 ]
 ```
 
-Cuando hayamos terminado de programar nuestra aplicación con routing, deberemos desplegarla, habiéndola convertido en Angular Elements. En este caso, aconsejamos seguir y repasar los pasos de los anteriores artículos en este blog sobre angular elements ([Creación angular elements](https://www.jesuscuesta.blog/angular-elements-desde-todos-los-angulos-1/) y [Usando extension de angular elements](https://www.jesuscuesta.blog/angular-elements-desde-todos-los-angulos-2/)).
+Dentro del módulo y componente creados, deberemos actualizar su contenido:
 
-Una vez convertida la aplicación a Angular elements, pasaremos a realizar los mismos pasos que en los anteriores posts, copiando la carpeta dist del angular elements generado o importándolo del repositorio donde hayamos subido su build (explicación más detallada en el artículo 3 de angular elements).
+```js
+// section-spa-with-routing.module.ts
+// Es utilizando la importación básica. Se aconsejaría utilizar la extendida.
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { SectionSpaWithRoutingRoutingModule } from './section-spa-with-routing-routing.module';
+import { SectionSpaWithRoutingComponent } from './section-spa-with-routing.component';
+
+import '../../../assets/spa-with-routing/main-es2015';
+@NgModule({
+  declarations: [SectionSpaWithRoutingComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [
+    CommonModule,
+    SectionSpaWithRoutingRoutingModule
+  ]
+})
+export class SectionSpaWithRoutingModule { }
+```
+
+Añadimos posteriormente en el html, el tag de nuestro angular element generado:
+
+```js
+// section-spa-with-routing.component.html
+<spa-with-routing-elements></spa-with-routing-elements>
+```
 
 ### A tener en cuenta
 
