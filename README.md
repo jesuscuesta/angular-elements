@@ -93,7 +93,7 @@ ng new spa-one --routing --prefix=spa-one
 
 La documentación de dicha aplicación, y como generarla, está en su [propio readme](https://github.com/jesuscuesta/angular-elements/tree/feat/spa-one/spa-one).
 
-## Generamos SPA-TWO
+## Generamos SPA-With-Routing
 
 Generamos la aplicación spa-with-routing
 
@@ -101,7 +101,7 @@ Generamos la aplicación spa-with-routing
 ng new spa-with-routing --routing --prefix=spa-with-routing
 ```
 
-La documentación de dicha aplicación, y como generarla, está en su [propio readme](https://github.com/jesuscuesta/angular-elements/tree/feat/spa-one/spa-one).
+La documentación de dicha aplicación, y como generarla, está en su [propio readme](https://github.com/jesuscuesta/angular-elements/tree/master/spa-with-routing).
 
 ## Documentación
 
