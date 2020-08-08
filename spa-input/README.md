@@ -21,30 +21,69 @@ Las dependencias y sus versiones importantes que deberemos tener en cuenta:
 
 ```
 
-## Configuración input y output
-
 En el caso de que instálasemos otras, podría ser que no funcionase nuestro ejemplo. Sobre todo ngx-build-plus, que siempre se actualiza con cada versión de angular.
 
-## Development server
+## Configuración input y output
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Input
 
-## Code scaffolding
+Para añadir un campo input para pasar la información será muy sencillo. Solo deberemos modificar el componente de typescript y el html.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```js
+// app.component.ts
+import { Component, ViewEncapsulation, Input } from '@angular/core';
 
-## Build
+@Component({
+  selector: 'spa-one-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
+})
+export class AppComponent {
+  @Input() nombre = 'test';
+}
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
 
-## Running unit tests
+En el componente hemos creado una propiedad llamada nombre y le hemos asignado por defecto una valor, para en el caso de que no nos pasasen ningún valor, obtener algún resultado.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Posteriormente añadiríamos dicho valor en el html.
 
-## Running end-to-end tests
+```js
+// app.component.html
+<p>Ejemplo SPA Input</p>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+<div>
+  Valor del input {{nombre}}
+</div>
+```
 
-## Further help
+Ahora para ver los resultados, solo deberíamos generar el angular elements, con el comando que debíamos haber añadido al package.json con anterioridad `"build:ele": "ng build --prod --output-hashing none --single-bundle true",`, con lo que ejecutando en la terminal `npm run build:ele`, generaríamos el build de nuestro componente.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para probarlo, solo deberíamos ir a la carpeta dist/spa-input, y modificar el index.html para añadir el webcomponent y añadirle el input.
+
+```js
+// index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SpaOne</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <spa-one-elements nombre="Jesus Cuesta"></spa-one-elements>
+    <script src="polyfills-es5.js" nomodule defer></script>
+    <script src="polyfills-es2015.js" type="module"></script>
+    <script src="main-es2015.js" type="module"></script>
+    <script src="main-es5.js" nomodule defer></script>
+  </body>
+</html>
+
+```
+
+Estamos añadiendo el webcomponente y además, le pasamos un valor por el campo input que habíamos asignado. En este caso solo es un string, pero podríamos pasar objetos más complicados.
+
+Para ver el resultado en un navegador, solo deberíamos ir a la carpeta dis/spa-input y ejecutar el siguiente comando `npx static-server -o`.
