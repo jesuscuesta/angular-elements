@@ -30,7 +30,7 @@ Luego en de app.component.html, añadimos el menú.
 
 ### Pasar valores con input y output
 
-- [Explicación SPA con routing básico convertida en Angular elements](https://github.com/jesuscuesta/angular-elements/blob/doc/portal/portal/readme/spa-input.md)
+- [Explicación SPA con routing básico convertida en Angular elements](https://github.com/jesuscuesta/angular-elements/blob/master/portal/readme/spa-input.md)
 
 ### Webcomponent con secciones sin lazy loading
 

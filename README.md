@@ -103,6 +103,16 @@ ng new spa-with-routing --routing --prefix=spa-with-routing
 
 La documentación de dicha aplicación, y como generarla, está en su [propio readme](https://github.com/jesuscuesta/angular-elements/tree/master/spa-with-routing).
 
+## Generamos SPA-Input
+
+Generamos la aplicación spa-input
+
+```js
+ng new spa-input --routing --prefix=spa-input
+```
+
+La documentación de dicha aplicación, y como generarla, está en su [propio readme](https://github.com/jesuscuesta/angular-elements/tree/master/spa-input).
+
 ## Documentación
 
 - https://angular.io/guide/elements: Documentación oficial de Angular para los Angular Elements. Bastante mala la documentación, no os resolverá ninguna duda.
