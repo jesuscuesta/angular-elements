@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, Input } from '@angular/core';
+import { Component, ViewEncapsulation, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'spa-one-root',
@@ -8,4 +8,11 @@ import { Component, ViewEncapsulation, Input } from '@angular/core';
 })
 export class AppComponent {
   @Input() nombre = 'test';
+
+  propagar = new EventEmitter<string>();
+
+  public activate() {
+    console.log('Esta funcionando');
+    this.propagar.emit('Este dato viajará hacia el padre');
+  }
 }
