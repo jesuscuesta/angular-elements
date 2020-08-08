@@ -30,6 +30,13 @@ const routes: Routes = [
         './pages/section-spa-with-routing/section-spa-with-routing.module'
       ).then((m) => m.SectionSpaWithRoutingModule),
   },
+  {
+    path: 'section-spa-input',
+    loadChildren: () =>
+      import('./pages/section-spa-input/section-spa-input.module').then(
+        (m) => m.SectionSpaInputModule
+      ),
+  },
 ];
 
 @NgModule({

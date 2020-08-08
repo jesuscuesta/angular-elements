@@ -19,7 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
 export class AppModule {
   constructor(private injector: Injector) {
   const el = createCustomElement(AppComponent, { injector });
-  customElements.define('spa-one-elements', el);
+  customElements.define('spa-input-elements', el);
 }
 
   ngDoBootstrap() {}

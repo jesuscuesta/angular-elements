@@ -141,25 +141,50 @@ Una vez generador el proyecto, el index.html nos quedaría así:
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
-    <spa-one-elements
+    <spa-input-elements
       nombre="Jesus Cuesta"
       (propagar)="procesaPropagar($event)"
-    ></spa-one-elements>
+    ></spa-input-elements>
     <script src="polyfills-es5.js" nomodule defer></script>
     <script src="polyfills-es2015.js" type="module"></script>
     <script src="main-es2015.js" type="module"></script>
     <script src="main-es5.js" nomodule defer></script>
 
     <script>
-      function procesaPropagar(evento) {
-        console.log('prueba');
-        console.log(evento);
-      }
+        const component = document.querySelector('spa-input-elements');
+        component.addEventListener('propagar', (event) => {
+        alert(event.detail);
+      });
     </script>
   </body>
 </html>
 
+
 ```
 
-En este caso, si intentamos utilizar el evento en un html básico sin angular, no nos funcionará.
+Como podéis comprobar, para poder detectar el output en un proyecto que no sea de angular, deberemos crear un Event Listener, para gestionar dichos eventos.
 
+En el caso de que estuviésemos utilizando el webcomponent en un proyecto con Angular, podríamos gestionarlo de la forma habitual.
+
+```js
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'portal-section-spa-input',
+  templateUrl: './section-spa-input.component.html',
+  styleUrls: ['./section-spa-input.component.scss']
+})
+export class SectionSpaInputComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  procesaPropagar(evento) {
+    console.log('Valor pasado del webcomponent: ' + evento.detail);
+  }
+
+}
+
+```
