@@ -118,7 +118,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class AppComponent {
   title = 'spa-one';
 }
-
 ```
 
 Como podemos ver en la captura de pantalla, si vamos al depurador, veremos que ahora tenemos #shadow-root.
