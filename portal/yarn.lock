@@ -117,6 +117,11 @@
     ora "4.0.3"
     rxjs "6.5.4"
 
+"@angular-extensions/elements@^9.3.0":
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/@angular-extensions/elements/-/elements-9.4.0.tgz#7e4fb70745c0bfd57f60e34ab84d76d35f28820e"
+  integrity sha512-dY16pjitgdsuKlF804fEY3spaYMigbe02qmVErN83+Cvz6jQb10HXDSMF8Ui8z45NhOFw3z7qGraNGhB1/iEkA==
+
 "@angular/animations@~9.1.9":
   version "9.1.9"
   resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-9.1.9.tgz#de54334ea195189402487855c9a98f5618605da4"
@@ -180,6 +185,11 @@
   version "9.1.9"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-9.1.9.tgz#db4241f867d6e14b81ed6e7c50334813c6ebfc10"
   integrity sha512-q/DERgVU6vK2LtTcdVCGGBcoO424WsEfImh3Vcuy+P/ZVmthlDUC/+q+tSKt8MMf4hLpxFDQJE8vUSkktj7QEw==
+
+"@angular/elements@^9.1.9":
+  version "9.1.11"
+  resolved "https://registry.yarnpkg.com/@angular/elements/-/elements-9.1.11.tgz#8bb928d51e23ddc31d48ab04305cd8d58916b7e4"
+  integrity sha512-Tkldm075Nnbu1d52NgkaPP30DOMdRdtuPu78eaCvaxqDEK8WV58KrdQHwebP6+7pf+/6sqgMsveoIIVlYOBNZw==
 
 "@angular/forms@~9.1.9":
   version "9.1.9"
@@ -2947,6 +2957,11 @@ dependency-graph@^0.7.2:
   resolved "https://registry.yarnpkg.com/dependency-graph/-/dependency-graph-0.7.2.tgz#91db9de6eb72699209d88aea4c1fd5221cac1c49"
   integrity sha512-KqtH4/EZdtdfWX0p6MGP9jljvxSY6msy/pRUD4jgNwVpv3v1QmNLlsB3LDSSUg79BRVSn7jI1QPRtArGABovAQ==
 
+"deploy-angular-element@git+https://github.com/jesuscuesta/deploy-angular-element.git":
+  version "1.0.0"
+  uid "690e82e27f031a886524932f33fe6c20c2a47180"
+  resolved "git+https://github.com/jesuscuesta/deploy-angular-element.git#690e82e27f031a886524932f33fe6c20c2a47180"
+
 des.js@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/des.js/-/des.js-1.0.1.tgz#5382142e1bdc53f85d86d53e5f4aa7deb91e0843"
@@ -3018,6 +3033,13 @@ dns-txt@^2.0.2:
   integrity sha1-uR2Ab10nGI5Ks+fRB9iBocxGQrY=
   dependencies:
     buffer-indexof "^1.0.0"
+
+document-register-element@^1.7.2:
+  version "1.14.3"
+  resolved "https://registry.yarnpkg.com/document-register-element/-/document-register-element-1.14.3.tgz#3335d4578df6a1536a34595b91cca36dd5db61d7"
+  integrity sha512-SbJTzoQXLTcYxnpdDNRZXu/gwsGSShemXpvj6Pa6ujRwJFpJ41siil4tk4y+cQXnqylS6mc2Rtxp/PkMzfkqyQ==
+  dependencies:
+    lightercollective "^0.3.0"
 
 dom-serialize@^2.2.1:
   version "2.2.1"
@@ -4967,6 +4989,11 @@ lie@~3.3.0:
   dependencies:
     immediate "~3.0.5"
 
+lightercollective@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/lightercollective/-/lightercollective-0.3.0.tgz#1f07638642ec645d70bdb69ab2777676f35a28f0"
+  integrity sha512-RFOLSUVvwdK3xA0P8o6G7QGXLIyy1L2qv5caEI7zXN5ciaEjbAriRF182kbsoJ1S1TgvpyGcN485fMky6qxOPw==
+
 loader-runner@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.4.0.tgz#ed47066bfe534d7e84c4c7b9998c2a75607d9357"
@@ -5604,9 +5631,9 @@ npm-pick-manifest@^3.0.0:
     semver "^5.4.1"
 
 npm-registry-fetch@^4.0.0:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/npm-registry-fetch/-/npm-registry-fetch-4.0.4.tgz#2da1ecf3f43d419d96abf313664291a4623d3ea5"
-  integrity sha512-6jb34hX/iYNQebqWUHtU8YF6Cjb1H6ouTFPClYsyiW6lpFkljTpdeftm53rRojtja1rKAvKNIIiTS5Sjpw4wsA==
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/npm-registry-fetch/-/npm-registry-fetch-4.0.5.tgz#cb87cf7f25bfb048d6c3ee19d115bebf93ea5bfa"
+  integrity sha512-yQ0/U4fYpCCqmueB2g8sc+89ckQ3eXpmU4+Yi2j5o/r0WkKvE2+Y0tK3DEILAtn2UaQTkjTHxIXe2/CSdit+/Q==
   dependencies:
     JSONStream "^1.3.4"
     bluebird "^3.5.1"
